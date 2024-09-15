@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="header"></div>
+    <div id="home"></div>
+    <div id="about"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="resume"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+
+    <script>
+        // Load HTML components dynamically
+        async function loadComponent(url, elementId) {
+            const response = await fetch(url);
+            const html = await response.text();
+            document.getElementById(elementId).innerHTML = html;
+        }
+
+        loadComponent('header.html', 'header');
+        loadComponent('home.html', 'home');
+        loadComponent('about.html', 'about');
+        loadComponent('skills.html', 'skills');
+        loadComponent('projects.html', 'projects');
+        loadComponent('resume.html', 'resume');
+        loadComponent('contact.html', 'contact');
+        loadComponent('footer.html', 'footer');
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

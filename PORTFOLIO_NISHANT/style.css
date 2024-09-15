@@ -1,0 +1,405 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+p {
+  margin: 15px 0;
+}
+
+/* Header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  overflow: hidden;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f39c12;
+  position: absolute;
+  top: 10px; /* Adjust according to your requirement */
+  left: 20px;
+}
+.logo-image {
+  height: 50px; /* Adjust height to match the logo's height */
+  width: auto; /* Maintain aspect ratio */
+  /* Ensure image is visible against the background */
+  background: rgba(
+    0,
+    0,
+    0,
+    0.7
+  ); /* Optional: Add a background for better visibility */
+  mix-blend-mode: multiply; /* Remove white background */
+  opacity: inherit;
+}
+
+.navbar {
+  flex-grow: 1;
+  text-align: right;
+}
+
+.navbar ul {
+  list-style: none;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar ul li a:hover {
+  color: #f39c12;
+}
+
+/* Home Section */
+/* .home {
+    background: url('./images/nishant1.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h2 {
+    font-size: 48px;
+    color: #f39c12;
+    text-align: left;
+    margin-right: 25%;
+} */
+
+/* style.css */
+
+.home {
+  background: url("./images/nishant1.png") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home h2 {
+  font-size: 4.5em;
+  color: antiquewhite;
+  margin-right: 550px;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-card {
+  /* background-color: #444; */
+  padding: 20px;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.text-card h2 {
+  color: #f39c12;
+}
+
+.text-card p {
+  color: #ccc;
+}
+
+/* Skills Section */
+/* Skills Section */
+.skills {
+  padding: 50px 20px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure items are in a single line */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  /* gap: 30px; Increased space between skill items */
+  justify-content: space-evenly;
+}
+
+.skill-item {
+  background-color: #444;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 0 0 auto; /* Prevent flex items from growing or shrinking */
+}
+
+.skill-item img {
+  width: 60px; /* Adjust size of skill image */
+  height: 60px; /* Ensure height matches width for a circular appearance */
+  border-radius: 50%; /* Round the image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.skill-item span {
+  color: #fff;
+  display: block; /* Ensure text is on a new line below the image */
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping, keep all cards in a single line */
+  gap: 20px; /* Space between project cards */
+  overflow-x: auto; /* Allow horizontal scrolling if needed */
+  padding: 10px 0; /* Padding to ensure some space around scrolling area */
+  justify-content: space-evenly;
+}
+
+.project-card {
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%; /* Make cards responsive to container width */
+  max-width: 300px; /* Maximum width of the card */
+  height: auto; /* Adjust height automatically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* Hide overflow content */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  position: relative; /* Position relative for content management */
+}
+
+.project-card img {
+  width: 100%; /* Ensure the image fits the width of the card */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 10px; /* Match border radius of the card */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.project-info {
+  text-align: center;
+  color: #ccc; /* Ensure text is readable on dark background */
+}
+
+.project-info h3 {
+  margin: 10px 0;
+  color: #f39c12; /* Highlight project titles */
+  font-size: 1.2em; /* Responsive font size */
+}
+
+.project-info p {
+  font-size: 0.9em; /* Responsive font size */
+  margin-bottom: 10px;
+  overflow: hidden; /* Hide overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit text to 3 lines */
+  -webkit-box-orient: vertical; /* Ensure text is displayed vertically */
+}
+
+.project-info a {
+  color: #f39c12; /* Link color */
+  text-decoration: none;
+}
+
+.project-info a:hover {
+  text-decoration: underline;
+}
+/* Resume Section */
+.resume {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.download-btn {
+  background-color: #f39c12;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.download-btn:hover {
+  background-color: #e67e22;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #f39c12;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.contact-form button:hover {
+  background-color: #e67e22;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Project Detail Page */
+/* .project-detail {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-card {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card h2 {
+    margin-top: 15px;
+    color: #f39c12;
+}
+
+.project-card p {
+    color: #fff;
+} */
+
+/* Project Detail Page */
+/* Project Detail Page */
+/* .project-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #333;
+    color: #fff;
+    min-height: 100vh; 
+}
+
+.project-detail .project-image {
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 30px; 
+}
+
+.project-detail .project-info {
+    width: 100%;
+    max-width: 1200px; 
+    text-align: center;
+}
+
+.project-detail .project-info h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #f39c12;
+}
+
+.project-detail .project-info p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-detail .project-info a {
+    color: #f39c12;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.project-detail .project-info a:hover {
+    text-decoration: underline;
+} */
+
+.project-detail {
+  padding: 40px;
+  text-align: center;
+}
+
+.project-detail h2 {
+  margin-bottom: 20px;
+}
+
+.project-detail-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.project-detail p {
+  font-size: 16px;
+  line-height: 1.6;
+}
